@@ -1,0 +1,108 @@
+#app {
+    // width: 350px;
+    width: 90%;
+    margin: 10% auto;
+    // border: 2px solid rgb(185, 182, 182);
+    padding: 20px 20px 40px 20px;
+    border-radius: 10px;
+    text-align: center;
+    marg
+    
+
+    #tittle {
+        font-size: 25px;
+    }
+
+    #task-text{
+        text-align: left;
+        font-size: 30px;
+    }
+    ul{
+        padding: 0px;
+        margin-top: 50px;
+    }
+
+    li {
+        list-style: none;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        margin-top: 10px;
+        height: 30px;
+        font-size: 30px;
+        display: block;
+
+    }
+
+    h2 {
+        color: purple;
+        font-size: 40px;
+        // left: 0px;
+        text-align: left;
+        
+
+        button {
+            float: right;
+            right: 50px;
+            cursor: pointer;
+            display: block;
+        }
+    }
+
+    .done {
+        text-decoration: line-through;
+        opacity: 0.4;
+    }
+
+    #delete-button {
+        margin-left: 40px;
+        margin-top: 10px;
+        display: inline-block;
+        
+        
+        button {
+            color: red;
+            cursor: pointer;
+            margin-left: 20px;
+            float: right;
+            margin-right: 60px;
+            
+            
+
+        }
+
+    }
+
+    form {
+        padding-top: 30px;
+    }
+
+    #comment {
+        padding: 5px;
+        border: 0.5px solid grey;
+        border-radius: 5px;
+    }
+
+    #add-btn {
+        background-color: #9b4dca;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        width: 80px;
+        height: 30px;
+        letter-spacing: 5px;
+        // margin-left: 30px;
+        margin-top: 30px;
+        cursor: pointer;
+        left: 0px;
+        display: block;
+        
+    }
+    #form-text{
+        height: 25px;
+        width: 70%;
+        left: 0px;
+        display: block;
+
+    }
+}

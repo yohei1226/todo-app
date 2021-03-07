@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <div id="app">
+        <h2>
+            <button v-on:click="purge">選択削除</button>
+            To do List
+        </h2>
+        <!-- formタグを入れないとエンターでaddされない -->
+
+        <form v-on:submit.prevent>
+
+            <input type="text" v-model="newItem" id="form-text">
+            <button v-on:click="addItem" id="add-btn">add</button>
+
+        </form>
+
+
+        <!-- <p id="task-text">ID&nbsp;:&nbsp;&nbsp;CurrentTask</p> -->
+
+        <!-- newItemが一つ追加されるたびに<li>が一つ追加される挙動 -->
+        <ul>
+            <li v-show="!todos.length"></li>
+            <!-- このindexをdeleteItemメソッドで呼ぶことで指定のitemを削除できる -->
+            <li v-for="(todo,index) in todos">
+                <span>{{todo.id}}&nbsp;&nbsp;:</span>
+                <input type="checkbox" v-model="todo.isDone">
+                <span v-bind:class="{done: todo.isDone}" id="tittle">
+                    {{todo.item}}
+                </span>
+
+                <div v-on:click="deleteItem(index)" id="delete-button">
+
+                    <button>delete</button>
+
+                </div>
+
+
+            </li>
+        </ul>
+
+        
+        
+
+        <!-- <pre>{{$data}}</pre> -->
+
+        
+
+
+
+
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
